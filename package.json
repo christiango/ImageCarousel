@@ -17,7 +17,9 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
     "babel-loader": "^8.0.2",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -37,6 +39,9 @@
     "presets": [
       "@babel/env",
       "@babel/react"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
     ]
   },
   "prettier": {
