@@ -9,7 +9,7 @@ const PreviewCard = props => (
 export class PreviewPane extends React.PureComponent {
   render() {
     return (
-      <div style={{ display: 'flex', height: 200, justifyContent: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', height: 200 }}>
         {this.props.items.map((item, index) => (
           <PreviewCard
             key={index}

@@ -55,8 +55,16 @@ export class App extends React.PureComponent {
     const { selectedIndex, pictures } = this.state;
 
     return (
-      <div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          height: '100%',
+          justifyContent: 'space-around'
+        }}
+      >
         <SearchBox onSearchSubmit={this.onSearchSubmit} />
+
         <Carousel
           heroImageUrl={
             selectedIndex !== undefined && pictures[selectedIndex].photoUrl
@@ -64,6 +72,7 @@ export class App extends React.PureComponent {
           onPreviousClick={this.onPreviousPicture}
           onNextClick={this.onNextPicture}
         />
+
         <PreviewPane
           onPreviewClicked={this.navigateToPicture}
           items={pictures || []}

@@ -9,7 +9,7 @@ export class SearchBox extends React.PureComponent {
 
   render() {
     return (
-      <div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
         <input ref={this.inputRef} />
         <button onClick={this.onSubmit}>Search</button>
       </div>

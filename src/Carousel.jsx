@@ -11,9 +11,11 @@ export class Carousel extends React.PureComponent {
 
   render() {
     return (
-      <div>
+      <div style={{ display: 'flex' }}>
         <button onClick={this.onPreviousClick}>{'<'}</button>
-        <img src={this.props.heroImageUrl || ''} />
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+          <img src={this.props.heroImageUrl || ''} />
+        </div>
         <button onClick={this.onNextClick}>{'>'}</button>
       </div>
     );
