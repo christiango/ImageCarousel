@@ -13,7 +13,7 @@ export class Carousel extends React.PureComponent {
     return (
       <div>
         <button onClick={this.onPreviousClick}>{'<'}</button>
-        <div />
+        <img src={this.props.heroImageUrl || ''} />
         <button onClick={this.onNextClick}>{'>'}</button>
       </div>
     );
