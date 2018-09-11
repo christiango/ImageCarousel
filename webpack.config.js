@@ -1,19 +1,18 @@
 module.exports = {
-  mode: "development",
-  entry: "./src/index.jsx",
+  entry: './src/index.jsx',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ['babel-loader']
       }
     ]
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"]
+    extensions: ['*', '.js', '.jsx']
   },
   output: {
-    filename: "bundle.js"
+    filename: 'bundle.js'
   }
 };
