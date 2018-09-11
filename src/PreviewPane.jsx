@@ -1,15 +1,15 @@
 import * as React from 'react';
 
 const PreviewCard = props => (
-  <div
+  <img
     style={{
       padding: 10,
-      border: props.isSelected ? '4px solid blue' : 'none'
+      border: props.isSelected ? '4px solid blue' : 'none',
+      height: '100%'
     }}
     onClick={props.onPreviewClick}
-  >
-    <img src={props.photoUrl} style={{ height: '100%' }} />
-  </div>
+    src={props.photoUrl}
+  />
 );
 
 export class PreviewPane extends React.PureComponent {
