@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { SearchBox } from './SearchBox';
+import { Carousel } from './Carousel';
 import { FlickrApiKey } from '../apiKey';
 
 export class App extends React.PureComponent {
@@ -15,10 +16,18 @@ export class App extends React.PureComponent {
     console.log(json);
   };
 
+  onPreviousPicture = () => {};
+
+  onNextPicture = () => {};
+
   render() {
     return (
       <div>
         <SearchBox onSearchSubmit={this.onSearchSubmit} />
+        <Carousel
+          onPreviousClick={this.onPreviousPicture}
+          onNextClick={this.onNextPicture}
+        />
       </div>
     );
   }
