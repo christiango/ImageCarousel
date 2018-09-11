@@ -16,7 +16,7 @@ export class App extends React.PureComponent {
   onSearchSubmit = async searchTerm => {
     // Request images with the keyword matching the user search term
     let response = await fetch(
-      `https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=${searchTerm}&api_key=${FlickrApiKey}&format=json&nojsoncallback=1`
+      `https://api.flickr.com/services/rest/?method=flickr.photos.search&tags=${searchTerm}&per_page=4&api_key=${FlickrApiKey}&format=json&nojsoncallback=1`
     );
     const json = await response.json();
 
@@ -64,7 +64,11 @@ export class App extends React.PureComponent {
           onPreviousClick={this.onPreviousPicture}
           onNextClick={this.onNextPicture}
         />
-        <PreviewPane onPreviewClicked={this.navigateToPicture} />
+        <PreviewPane
+          onPreviewClicked={this.navigateToPicture}
+          items={pictures || []}
+          selectedIndex={selectedIndex}
+        />
       </div>
     );
   }
