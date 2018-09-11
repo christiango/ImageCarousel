@@ -65,19 +65,25 @@ export class App extends React.PureComponent {
       >
         <SearchBox onSearchSubmit={this.onSearchSubmit} />
 
-        <Carousel
-          heroImageUrl={
-            selectedIndex !== undefined && pictures[selectedIndex].photoUrl
-          }
-          onPreviousClick={this.onPreviousPicture}
-          onNextClick={this.onNextPicture}
-        />
+        <div style={{ flex: 10, position: 'relative' }}>
+          <Carousel
+            heroImageUrl={
+              selectedIndex !== undefined && pictures[selectedIndex].photoUrl
+            }
+            onPreviousClick={this.onPreviousPicture}
+            onNextClick={this.onNextPicture}
+          />
+        </div>
 
-        <PreviewPane
-          onPreviewClick={this.navigateToPicture}
-          items={pictures || []}
-          selectedIndex={selectedIndex}
-        />
+        <div
+          style={{ flex: 3, position: 'relative', backgroundColor: 'black' }}
+        >
+          <PreviewPane
+            onPreviewClick={this.navigateToPicture}
+            items={pictures || []}
+            selectedIndex={selectedIndex}
+          />
+        </div>
       </div>
     );
   }
