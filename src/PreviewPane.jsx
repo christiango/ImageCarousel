@@ -1,7 +1,13 @@
 import * as React from 'react';
 
 const PreviewCard = props => (
-  <div style={{ padding: 10 }} onClick={props.onPreviewClick}>
+  <div
+    style={{
+      padding: 10,
+      border: props.isSelected ? '4px solid blue' : 'none'
+    }}
+    onClick={props.onPreviewClick}
+  >
     <img src={props.photoUrl} style={{ height: '100%' }} />
   </div>
 );
