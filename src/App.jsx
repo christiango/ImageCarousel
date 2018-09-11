@@ -74,7 +74,7 @@ export class App extends React.PureComponent {
         />
 
         <PreviewPane
-          onPreviewClicked={this.navigateToPicture}
+          onPreviewClick={this.navigateToPicture}
           items={pictures || []}
           selectedIndex={selectedIndex}
         />
